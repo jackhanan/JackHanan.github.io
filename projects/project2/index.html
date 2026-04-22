@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Pavilion | Studio Horizon</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        offwhite: '#f7f7f7',
+                        concrete: '#a0a0a0',
+                        accent: '#e63946'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body class="bg-offwhite text-charcoal antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-40 bg-offwhite/90 backdrop-blur-md py-6 px-8 md:px-16 flex justify-between items-center mix-blend-difference">
+        <a href="../../index.html" class="font-serif text-2xl font-bold tracking-tighter">STUDIO HORIZON</a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="../../index.html" class="hover:text-accent transition-colors">Home</a>
+            <a href="../../index.html#projects" class="hover:text-accent transition-colors">Projects</a>
+            <a href="../other-projects/index.html" class="hover:text-accent transition-colors">Other Works</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+            <i class="ph ph-list"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-charcoal text-offwhite flex flex-col justify-center items-center">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-3xl focus:outline-none">
+            <i class="ph ph-x"></i>
+        </button>
+        <div class="flex flex-col space-y-8 text-center text-2xl font-serif">
+            <a href="../../index.html" class="hover:text-accent transition-colors">Home</a>
+            <a href="../../index.html#projects" class="hover:text-accent transition-colors">Projects</a>
+            <a href="../other-projects/index.html" class="hover:text-accent transition-colors">Other Works</a>
+        </div>
+    </div>
+
+    <!-- Hero Image -->
+    <header class="h-[70vh] md:h-screen w-full relative mt-20 md:mt-0" data-aos="fade-in" data-aos-duration="1500">
+        <img src="hero.svg" alt="Glass Pavilion Hero" class="w-full h-full object-cover">
+    </header>
+
+    <!-- Project Details -->
+    <section class="py-24 px-8 md:px-16 max-w-screen-xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+
+            <!-- Title & Description -->
+            <div class="md:col-span-8" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-serif mb-8">Glass Pavilion</h1>
+                <p class="text-xl text-concrete leading-relaxed">
+                    Blurring the lines between indoors and out. The Glass Pavilion is an exercise in transparency and structural minimalism. Nestled within a dense forest, the structure almost disappears, allowing the surrounding nature to become the primary wallpaper of the living space.
+                </p>
+            </div>
+
+            <!-- Client & Meta Info -->
+            <div class="md:col-span-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="border-t border-concrete/30 pt-6 mb-6">
+                    <h3 class="text-sm uppercase tracking-widest text-concrete mb-1">Client</h3>
+                    <p class="font-serif text-lg">Private Commission</p>
+                </div>
+                <div class="border-t border-concrete/30 pt-6 mb-6">
+                    <h3 class="text-sm uppercase tracking-widest text-concrete mb-1">Location</h3>
+                    <p class="font-serif text-lg">Big Sur, California</p>
+                </div>
+                <div class="border-t border-concrete/30 pt-6 mb-6">
+                    <h3 class="text-sm uppercase tracking-widest text-concrete mb-1">Year</h3>
+                    <p class="font-serif text-lg">2023</p>
+                </div>
+                <div class="border-t border-concrete/30 pt-6">
+                    <h3 class="text-sm uppercase tracking-widest text-concrete mb-1">Area</h3>
+                    <p class="font-serif text-lg">4,500 sq ft</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="pb-24 px-4 md:px-16 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="overflow-hidden bg-charcoal aspect-square" data-aos="fade-up">
+                <img src="gallery1.svg" alt="Gallery 1" class="gallery-img w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden bg-charcoal aspect-square" data-aos="fade-up" data-aos-delay="100">
+                <img src="gallery2.svg" alt="Gallery 2" class="gallery-img w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden bg-charcoal aspect-[4/3] md:col-span-2" data-aos="fade-up">
+                <img src="gallery3.svg" alt="Gallery 3" class="gallery-img w-full h-full object-cover">
+            </div>
+            <div class="overflow-hidden bg-charcoal aspect-[4/3] md:col-span-2" data-aos="fade-up">
+                <img src="gallery4.svg" alt="Gallery 4" class="gallery-img w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="py-24 border-t border-concrete/30 text-center">
+        <p class="text-sm uppercase tracking-widest text-concrete mb-4">Next Project</p>
+        <a href="../project3/index.html" class="text-4xl md:text-6xl font-serif hover:text-accent transition-colors">Concrete Monolith</a>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-charcoal/95 flex justify-center items-center">
+        <button id="close-lightbox" class="absolute top-8 right-8 text-offwhite text-4xl hover:text-accent transition-colors focus:outline-none">
+            <i class="ph ph-x"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Fullscreen Image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-12 px-8 md:px-16">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h3 class="font-serif text-xl mb-4 md:mb-0">STUDIO HORIZON</h3>
+            <p class="text-concrete text-sm">&copy; 2024 Studio Horizon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, offset: 100 });</script>
+    <script src="../../script.js"></script>
+</body>
+</html>

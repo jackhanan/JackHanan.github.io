@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Horizon | Architectural Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#1a1a1a',
+                        offwhite: '#f7f7f7',
+                        concrete: '#a0a0a0',
+                        accent: '#e63946'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-offwhite text-charcoal antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-40 bg-offwhite/90 backdrop-blur-md py-6 px-8 md:px-16 flex justify-between items-center mix-blend-difference">
+        <a href="index.html" class="font-serif text-2xl font-bold tracking-tighter">STUDIO HORIZON</a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+            <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+            <a href="projects/other-projects/index.html" class="hover:text-accent transition-colors">Other Works</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+            <i class="ph ph-list"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-charcoal text-offwhite flex flex-col justify-center items-center">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-3xl focus:outline-none">
+            <i class="ph ph-x"></i>
+        </button>
+        <div class="flex flex-col space-y-8 text-center text-2xl font-serif">
+            <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+            <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+            <a href="projects/other-projects/index.html" class="hover:text-accent transition-colors">Other Works</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center px-8 text-center relative" data-aos="fade-in" data-aos-duration="1500">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-8xl font-serif leading-tight mb-6">Designing the spaces between<br><span class="text-concrete italic">light and shadow.</span></h1>
+            <p class="text-lg md:text-xl text-concrete max-w-2xl mx-auto mb-10">We are a minimalist architectural firm focusing on raw materials, stark geometries, and harmonious living environments.</p>
+            <a href="#projects" class="inline-block border-b border-charcoal pb-1 text-sm uppercase tracking-widest hover:text-accent hover:border-accent transition-all duration-300">View Selected Works</a>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="py-24 px-4 md:px-16 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+
+            <!-- Project 1 -->
+            <a href="projects/project1/index.html" class="group block" data-aos="fade-up">
+                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
+                    <img src="assets/cover1.svg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <h2 class="text-3xl font-serif">The Horizon Residence</h2>
+                    <span class="text-concrete text-sm">01</span>
+                </div>
+                <p class="text-concrete mt-2">A study in brutalist harmony.</p>
+            </a>
+
+            <!-- Project 2 (Offset) -->
+            <a href="projects/project2/index.html" class="group block md:mt-32" data-aos="fade-up" data-aos-delay="100">
+                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
+                    <img src="assets/cover2.svg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <h2 class="text-3xl font-serif">Glass Pavilion</h2>
+                    <span class="text-concrete text-sm">02</span>
+                </div>
+                <p class="text-concrete mt-2">Blurring the lines between indoors and out.</p>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="projects/project3/index.html" class="group block" data-aos="fade-up">
+                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
+                    <img src="assets/cover3.svg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <h2 class="text-3xl font-serif">Concrete Monolith</h2>
+                    <span class="text-concrete text-sm">03</span>
+                </div>
+                <p class="text-concrete mt-2">Imposing structure meeting delicate light.</p>
+            </a>
+
+            <!-- Project 4 (Offset) -->
+            <a href="projects/project4/index.html" class="group block md:mt-32" data-aos="fade-up" data-aos-delay="100">
+                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
+                    <img src="assets/cover4.svg" alt="Project 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                </div>
+                <div class="flex justify-between items-baseline">
+                    <h2 class="text-3xl font-serif">Alpine Retreat</h2>
+                    <span class="text-concrete text-sm">04</span>
+                </div>
+                <p class="text-concrete mt-2">Sustainable elevation.</p>
+            </a>
+
+            <!-- Other Projects Link -->
+            <a href="projects/other-projects/index.html" class="group block md:col-span-2 text-center mt-12" data-aos="fade-up">
+                <h2 class="text-4xl md:text-6xl font-serif inline-block border-b-2 border-transparent group-hover:border-charcoal transition-all duration-300 pb-2">Explore All Other Works <i class="ph ph-arrow-right inline-block ml-2 group-hover:translate-x-2 transition-transform"></i></h2>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-offwhite py-12 px-8 md:px-16 mt-24">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h3 class="font-serif text-xl mb-4 md:mb-0">STUDIO HORIZON</h3>
+            <p class="text-concrete text-sm">&copy; 2024 Studio Horizon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
