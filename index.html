@@ -69,53 +69,11 @@
     </header>
 
     <section id="projects" class="pt-4 pb-24 px-4 md:px-16 max-w-screen-2xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24" id="projects-grid">
 
-            <a href="projects/project1/index.html" class="group block" data-aos="fade-up">
-                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
-                    <img src="assets/cover 401.jpeg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                </div>
-                <div class="flex justify-between items-baseline">
-                    <h2 class="text-3xl font-serif">Flowline Hall Red Hook</h2>
-                    <span class="text-concrete text-sm">01</span>
-                </div>
-                <p class="text-concrete mt-2">Activating the Waterfront of Brooklyn</p>
-            </a>
-            
-            <a href="projects/project2/index.html" class="group block" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
-                    <img src="assets/cover 302.png" alt="Project 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                </div>
-                <div class="flex justify-between items-baseline">
-                    <h2 class="text-3xl font-serif">Lafayette Residence</h2>
-                    <span class="text-concrete text-sm">02</span>
-                </div>
-                <p class="text-concrete mt-2">Communal Living in the Heart of Brooklyn</p>
-            </a>
+            <div id="dynamic-projects-container" class="contents"></div>
 
-            <a href="projects/project3/index.html" class="group block" data-aos="fade-up">
-                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
-                    <img src="assets/cover 301.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                </div>
-                <div class="flex justify-between items-baseline">
-                    <h2 class="text-3xl font-serif">Houston St. Market & Education Center</h2>
-                    <span class="text-concrete text-sm">03</span>
-                </div>
-                <p class="text-concrete mt-2">Market As Urban Catalyst</p>
-            </a>
-
-            <a href="projects/project4/index.html" class="group block" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
-                    <img src="assets/cover 402.png" alt="Project 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                </div>
-                <div class="flex justify-between items-baseline">
-                    <h2 class="text-3xl font-serif">The Truss House</h2>
-                    <span class="text-concrete text-sm">04</span>
-                </div>
-                <p class="text-concrete mt-2">An Exploration of Structure, Enclosure, and Rural Living</p>
-            </a>
-
-            <a href="projects/other-projects/index.html" class="group block md:col-span-2 text-center mt-12" data-aos="fade-up">
+            <a href="projects/other-projects/index.html" class="group block md:col-span-2 text-center mt-12" data-aos="fade-up" id="other-works-link">
                 <h2 class="text-4xl md:text-6xl font-serif inline-block border-b-2 border-transparent group-hover:border-charcoal transition-all duration-300 pb-2">Other Works <i class="ph ph-arrow-right inline-block ml-2 group-hover:translate-x-2 transition-transform"></i></h2>
             </a>
         </div>

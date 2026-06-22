@@ -1,0 +1,50 @@
+[
+    {
+        "id": "project1",
+        "title": "Flowline Hall Red Hook",
+        "number": "01",
+        "subheading": "Activating the Waterfront of Brooklyn",
+        "link": "projects/project1/index.html",
+        "coverImage": "assets/cover 401.jpeg",
+        "location": "",
+        "year": "",
+        "description": "",
+        "gallery": []
+    },
+    {
+        "id": "project2",
+        "title": "Lafayette Residence",
+        "number": "02",
+        "subheading": "Communal Living in the Heart of Brooklyn",
+        "link": "projects/project2/index.html",
+        "coverImage": "assets/cover 302.png",
+        "location": "",
+        "year": "",
+        "description": "",
+        "gallery": []
+    },
+    {
+        "id": "project3",
+        "title": "Houston St. Market & Education Center",
+        "number": "03",
+        "subheading": "Market As Urban Catalyst",
+        "link": "projects/project3/index.html",
+        "coverImage": "assets/cover 301.jpg",
+        "location": "",
+        "year": "",
+        "description": "",
+        "gallery": []
+    },
+    {
+        "id": "project4",
+        "title": "The Truss House",
+        "number": "04",
+        "subheading": "An Exploration of Structure, Enclosure, and Rural Living",
+        "link": "projects/project4/index.html",
+        "coverImage": "assets/cover 402.png",
+        "location": "",
+        "year": "",
+        "description": "",
+        "gallery": []
+    }
+]
