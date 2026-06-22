@@ -1,4 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    // Dynamic Projects Fetching and Rendering
+    const projectsContainer = document.getElementById("dynamic-projects-container");
+    if (projectsContainer) {
+        try {
+            const response = await fetch("data/projects.json");
+            if (!response.ok) throw new Error("Failed to load projects data.");
+
+            const projects = await response.json();
+            projectsContainer.innerHTML = ""; // Clear loader if any
+
+            projects.forEach((project, index) => {
+                const delayAttr = (index % 2 !== 0) ? `data-aos-delay="100"` : '';
+
+                const html = `
+                    <a href="${project.link}" class="group block" data-aos="fade-up" ${delayAttr}>
+                        <div class="overflow-hidden mb-6 bg-charcoal aspect-[4/3]">
+                            <img src="${project.coverImage}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="flex justify-between items-baseline">
+                            <h2 class="text-3xl font-serif">${project.title}</h2>
+                            <span class="text-concrete text-sm">${project.number}</span>
+                        </div>
+                        <p class="text-concrete mt-2">${project.subheading}</p>
+                    </a>
+                `;
+                projectsContainer.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Re-initialize AOS to pick up new dynamic elements if needed,
+            // though typical AOS setups attach to the document flow.
+            if (typeof AOS !== 'undefined') {
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        } catch (error) {
+            console.error("Error fetching projects:", error);
+            projectsContainer.innerHTML = `<p class="text-concrete">Projects could not be loaded at this time.</p>`;
+        }
+    }
+
     // Mobile Menu Logic
     const menuBtn = document.getElementById("menu-btn");
     const closeMenuBtn = document.getElementById("close-menu-btn");
